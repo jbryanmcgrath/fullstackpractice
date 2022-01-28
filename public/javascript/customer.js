@@ -14,7 +14,7 @@ async function createCustomer(event) {
 }
 
 if (fname && lname && email && phonenum && areYouAPayingCustomerYes || areYouAPayingCustomerNo) {
-  const response = await fetch("controller/api/customer-routes.js", {
+  const response = await fetch("/api/customer-routes", {
     method: "post",
     body: JSON.stringify({
       fname,
@@ -32,7 +32,7 @@ if (fname && lname && email && phonenum && areYouAPayingCustomerYes || areYouAPa
     alert(response.statusText);
   }
 }
-}
+
 
 
 
